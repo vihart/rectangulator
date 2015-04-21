@@ -123,7 +123,8 @@ THREE.VRControls = function ( camera, done ) {
 
     	lastHeadQuat.copy(currentHeadQuat);
 
-    	var fwd = getFwdVectorOf(offsetQuat).multiplyScalar(15);//how much translation
+    	var translationAmount = 1+(camera.position.z + 3);
+    	var fwd = getFwdVectorOf(offsetQuat).multiplyScalar(translationAmount);//how much translation
     	// console.log(fwd);
     	fwd.z = 0;
     	camera.position = camera.position.sub(fwd);

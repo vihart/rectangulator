@@ -9,7 +9,7 @@ document.body.addEventListener( 'click', function(event) { // on click:
 	var tapX = event.clientX/window.innerWidth; //get X position proportional
 
 	if (tapX < .5){ // change zoom if tapping on left side
-		camera.position.z = (tapY * 40) - 3.5; //move camera position to zoom place
+		camera.position.z = (tapY * tapY * tapY * 40) - 3; //move camera position to zoom place
 	} else {
 		rightTaps++;
 	}
